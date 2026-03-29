@@ -58,3 +58,17 @@ const combined = nums
   .reduce((sum, n) => sum + n, 0);
 
 console.log(combined); // 12
+
+const users_list = [
+  { name: "A", active: true },
+  { name: "B", active: false }
+];
+
+const activeNames = users_list
+  .filter(u => u.active)
+  .map(u => u.name);
+console.log(activeNames); // ["A"]
+
+const arr_with_falsy = [0, 1, false, 2, "", 3];
+const clean = arr_with_falsy.filter(Boolean);
+console.log(clean); // [1, 2, 3]

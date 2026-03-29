@@ -20,3 +20,7 @@ console.log(numbersDesc);
 const nums = [3, 1, 2];
 nums.sort((a, b) => a - b);
 console.log(nums); // [1, 2, 3]
+
+const users = [{age: 30}, {age: 20}];
+users.sort((a, b) => a.age - b.age);
+console.log(users); // [{age: 20}, {age: 30}]
