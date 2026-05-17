@@ -1,7 +1,14 @@
-const isPalindrome = (str) => {
-    const reverseStr = str.split('').reverse().join('');
-    return str === reverseStr;
+function isPalindrome(str) {
+    return str === str.split("").reverse().join("");
 }
 
-console.log(isPalindrome("abcba")); // True
-console.log(isPalindrome("abcda")); // False
+console.log(isPalindrome("edde"));
+
+function isPalindromeES6(str) {
+    return str.split('')
+        .every((c, i) => {
+            return c === str[str.length - 1 - i];
+        });
+}
+
+console.log(isPalindromeES6("edde"));
